@@ -183,7 +183,7 @@ text-decoration:none;
 <button onclick="setLang('pl')">🇵🇱 Polski</button>
 </div>
 
-<h1>Yana_grum</h1>
+<h1 id="title">Yana_grum</h1>
 
 <p>Профессиональный груминг собак</p>
 
@@ -290,6 +290,18 @@ const times = [
 ];
 
 function setLang(lang){
+
+const title = document.getElementById("title");
+
+if(lang==="ru"){
+title.innerText = "Yana_grum";
+}
+
+if(lang==="pl"){
+title.innerText = "Yana_grum";
+}
+
+}
 
 if(lang==="ru"){
 alert("Русский язык включён");
