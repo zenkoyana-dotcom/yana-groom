@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yana_grum | Grooming Koszalin</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f7f7f7;
+color:#222;
+}
+
+header{
+background:#111;
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:38px;
+color:#d4af37;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:25px;
+margin-bottom:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+h2{
+margin-bottom:15px;
+color:#111;
+}
+
+.legend{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.legend div{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.circle{
+width:18px;
+height:18px;
+border-radius:50%;
+}
+
+.green{background:#37c871;}
+.red{background:#ff4d4d;}
+.gray{background:#999;}
+
+.calendar{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:10px;
+}
+
+.day{
+background:#fff;
+border-radius:12px;
+padding:15px;
+text-align:center;
+cursor:pointer;
+font-weight:bold;
+transition:.2s;
+border:2px solid #eee;
+}
+
+.day:hover{
+transform:scale(1.05);
+}
+
+.free{
+background:#37c871;
+color:white;
+}
+
+.busy{
+background:#ff4d4d;
+color:white;
+}
+
+.off{
+background:#999;
+color:white;
+}
+
+#times{
+display:none;
+margin-top:20px;
+}
+
+.time{
+display:inline-block;
+background:#d4af37;
+color:#111;
+padding:10px 16px;
+border-radius:10px;
+margin:6px;
+font-weight:bold;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px 20px;
+margin-top:30px;
+}
+
+a{
+color:#d4af37;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Yana_grum</h1>
+
+<p>Профессиональный груминг собак</p>
+
+<p>Koszalin</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Свободные даты</h2>
+
+<div class="legend">
+
+<div><span class="circle green"></span>Свободно</div>
+
+<div><span class="circle red"></span>Занято</div>
+
+<div><span class="circle gray"></span>Выходной</div>
+
+</div>
+
+<div class="calendar">
+
+<div class="day off">1</div>
+<div class="day free" onclick="showTimes(2)">2</div>
+<div class="day busy">3</div>
+<div class="day free" onclick="showTimes(4)">4</div>
+<div class="day off">5</div>
+<div class="day free" onclick="showTimes(6)">6</div>
+<div class="day busy">7</div>
+
+<div class="day free" onclick="showTimes(8)">8</div>
+<div class="day free" onclick="showTimes(9)">9</div>
+<div class="day busy">10</div>
+<div class="day off">11</div>
+<div class="day free" onclick="showTimes(12)">12</div>
+<div class="day busy">13</div>
+<div class="day free" onclick="showTimes(14)">14</div>
+
+<div class="day off">15</div>
+<div class="day free" onclick="showTimes(16)">16</div>
+<div class="day free" onclick="showTimes(17)">17</div>
+<div class="day busy">18</div>
+<div class="day free" onclick="showTimes(19)">19</div>
+<div class="day off">20</div>
+<div class="day free" onclick="showTimes(21)">21</div>
+
+<div class="day free" onclick="showTimes(22)">22</div>
+<div class="day busy">23</div>
+<div class="day free" onclick="showTimes(24)">24</div>
+<div class="day off">25</div>
+<div class="day free" onclick="showTimes(26)">26</div>
+<div class="day busy">27</div>
+<div class="day free" onclick="showTimes(28)">28</div>
+
+<div class="day free" onclick="showTimes(29)">29</div>
+<div class="day off">30</div>
+<div class="day free" onclick="showTimes(31)">31</div>
+
+</div>
+
+<div id="times">
+
+<h2>Свободное время</h2>
+
+<div id="timesList"></div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h2>Контакты</h2>
+
+<p style="margin-top:15px;">
+📞 <a href="tel:+48663676652">663 676 652</a>
+</p>
+
+<p style="margin-top:10px;">
+📷 Instagram:
+<a href="https://instagram.com/yana_grum" target="_blank">@yana_grum</a>
+</p>
+
+<p style="margin-top:10px;">
+🎵 TikTok:
+<a href="https://tiktok.com/@yana_grum" target="_blank">@yana_grum</a>
+</p>
+
+<p style="margin-top:25px;">
+© 2026 Yana_grum
+</p>
+
+</footer>
+
+<script>
+
+const times = [
+"15:00",
+"16:30",
+"18:00"
+];
+
+function showTimes(day){
+
+document.getElementById("times").style.display="block";
+
+let html="<h3>Дата: "+day+"</h3>";
+
+times.forEach(time=>{
+html+=`<div class="time">${time}</div>`;
+});
+
+document.getElementById("timesList").innerHTML=html;
+
+window.scrollTo({
+top:document.getElementById("times").offsetTop-20,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
