@@ -28,6 +28,28 @@ padding:40px 20px;
 text-align:center;
 }
 
+.lang{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.lang button{
+background:#d4af37;
+color:#111;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+font-size:14px;
+}
+
+.lang button:hover{
+opacity:.9;
+}
+
 header h1{
 font-size:38px;
 color:#d4af37;
@@ -155,6 +177,11 @@ text-decoration:none;
 <body>
 
 <header>
+    
+<div class="lang">
+<button onclick="setLang('ru')">🇷🇺 Русский</button>
+<button onclick="setLang('pl')">🇵🇱 Polski</button>
+</div>
 
 <h1>Yana_grum</h1>
 
