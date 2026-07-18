@@ -293,27 +293,25 @@ function setLang(lang){
 
 const title = document.getElementById("title");
 
+const subtitle = document.getElementById("subtitle");
+
 if(lang==="ru"){
-title.innerText = "Yana_grum";
+title.innerText="Yana_grum";
+
+if(subtitle){
+subtitle.innerText="Профессиональный груминг собак";
+}
 }
 
 if(lang==="pl"){
-title.innerText = "Yana_grum";
+title.innerText="Yana_grum";
+
+if(subtitle){
+subtitle.innerText="Profesjonalny grooming psów";
+}
 }
 
 }
-
-if(lang==="ru"){
-alert("Русский язык включён");
-}
-
-if(lang==="pl"){
-alert("Język polski włączony");
-}
-
-}
-
-function showTimes(day){
 
 document.getElementById("times").style.display="block";
 
