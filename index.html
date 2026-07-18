@@ -291,27 +291,22 @@ const times = [
 
 function setLang(lang){
 
-const title = document.getElementById("title");
-
-const subtitle = document.getElementById("subtitle");
+const title=document.getElementById("title");
+const subtitle=document.getElementById("subtitle");
 
 if(lang==="ru"){
 title.innerText="Yana_grum";
-
-if(subtitle){
 subtitle.innerText="Профессиональный груминг собак";
-}
 }
 
 if(lang==="pl"){
 title.innerText="Yana_grum";
-
-if(subtitle){
 subtitle.innerText="Profesjonalny grooming psów";
 }
-}
 
 }
+
+function showTimes(day){
 
 document.getElementById("times").style.display="block";
 
