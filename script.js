@@ -1,12 +1,42 @@
 
+const times = [
+"15:00",
+"16:30",
+"18:00"
+];
+
 function setLang(lang){
 
+const title=document.getElementById("title");
+const subtitle=document.getElementById("subtitle");
+
 if(lang==="ru"){
-alert("Русский язык включён");
+title.innerText="Yana_grum";
+subtitle.innerText="Профессиональный груминг собак";
 }
 
 if(lang==="pl"){
-alert("Język polski włączony");
+title.innerText="Yana_grum";
+subtitle.innerText="Profesjonalny grooming psów";
 }
+
+}
+
+function showTimes(day){
+
+document.getElementById("times").style.display="block";
+
+let html="<h3>Дата: "+day+"</h3>";
+
+times.forEach(time=>{
+html+=`<div class="time">${time}</div>`;
+});
+
+document.getElementById("timesList").innerHTML=html;
+
+window.scrollTo({
+top:document.getElementById("times").offsetTop-20,
+behavior:"smooth"
+});
 
 }
