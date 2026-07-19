@@ -1,3 +1,5 @@
+alert("script.js работает");
+
 async function loadCalendar() {
     const { data, error } = await supabase
         .from("calendar")
