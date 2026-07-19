@@ -1,3 +1,13 @@
+async function loadCalendar() {
+    const { data, error } = await supabase
+        .from("calendar")
+        .select("*");
+
+    console.log(data);
+    console.log(error);
+}
+
+loadCalendar();
 
 const times = [
 "15:00",
