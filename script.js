@@ -1,14 +1,25 @@
 alert(typeof supabase);
 
 async function loadCalendar() {
-    const { data, error } = await supabase
-        .from("kalendar")
-        .select("*");
-        
-alert(error ? error.message : "OK");
+    try {
+        alert("1");
 
-    console.log(data);
-    console.log(error);
+        const { data, error } = await supabase
+            .from("kalendar")
+            .select("*");
+
+        alert("2");
+
+        if (error) {
+            alert(error.message);
+        } else {
+            alert("OK");
+        }
+
+        console.log(data);
+    } catch (e) {
+        alert("Ошибка: " + e.message);
+    }
 }
 
 loadCalendar();
