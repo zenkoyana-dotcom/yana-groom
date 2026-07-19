@@ -8,4 +8,5 @@ const supabase = window.supabase.createClient(
   SUPABASE_KEY
 );
 
-console.log("Supabase подключен");
+console.log(supabase);
+alert(typeof supabase.from);
