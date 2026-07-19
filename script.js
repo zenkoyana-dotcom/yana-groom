@@ -2,7 +2,7 @@ alert(typeof supabase);
 
 async function loadCalendar() {
     const { data, error } = await supabase
-        .from("calendar")
+        .from("kalendar")
         .select("*");
         
 alert(error ? error.message : "OK");
